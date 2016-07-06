@@ -1,0 +1,110 @@
+
+html, body {
+    padding:0;
+    margin:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    perspective: 400px;
+    overflow:hidden;
+}
+
+.wrapper #myMessage {
+    font-size: 2.5em;
+    color: #848484;
+    text-align: center;
+}
+
+.wrapper #myMessage span {
+	position: relative;
+	display: inline-block;
+	white-space: pre;
+	-webkit-font-smoothing:antialiased;
+}
+
+#myLinks {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.btn {
+    margin: 10px;
+    text-align: center;
+    
+}
+
+.btn a {
+    padding: 10px;
+    border: solid 2px red;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: red;
+    transition: all .4s ease-out;
+}
+
+.btn a:hover {
+    color: greenyellow;
+    box-shadow: 2px 2px 6px red;
+
+}
+
+.btn i { 
+    margin-right: 5px;
+    }
+
+/* ------SLIDER------- */
+
+#mySlider {
+    margin: 70px auto;
+    display: block;
+    max-width: 1080px;
+    height: auto;
+}
+
+#mySlider .item {
+    text-align: center;
+    padding: 10px;
+    }
+
+#mySlider .item img {
+    width: 100%;
+}
+
+/* -------FOOTER------- */
+
+#footer {
+    min-width: 100%;
+    background: #848484;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#footer li {
+    list-style: none;
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+#footer li:nth-child(2), li:nth-child(3), li:nth-child(4) {
+    padding-left: 10px;
+}
+
+#footer ul li a {
+    color:red;
+}
+
+#footer ul li a:hover {
+    color: greenyellow;
+    
+}
