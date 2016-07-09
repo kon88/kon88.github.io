@@ -1,22 +1,48 @@
 
 (function() {
-    $(".wrapper #myMessage p").lettering();
-})(jQuery);
+    
+        $(".wrapper #myMessage p").lettering();
+        var para = $('.wrapper #myMessage [class^="char"]');
 
-function random(min, max) {
-    return (Math.random() * (max - min)) + min;
-    }
-
-$('.wrapper #myMessage [class^="char"]').each(function(i){
-    TweenMax.from($(this), 1, {
+        $(para).each(function(i){
+        TweenMax.from($(this), 1, {
+            opacity: 0,
+            x: random(-200, 200),
+            y: random(-200, 200),
+            z: random(-500, 500),
+            scale: .1,
+            delay: i * .02
+            });
+        });
+    
+        function random(min, max) {
+            return (Math.random() * (max - min)) + min;
+         }  
+    
+    
+    var text1 = $('.wrapper #myMessage h2');
+    var text2 = $('.wrapper #myMessage h1');
+    
+    var tl1 = new TimelineMax({delay: 2.5});
+    
+    tl1.from(text1, .5, {autoAlpha: 0, y: -50});
+    tl1.from(text2, .5, {autoAlpha:0},"+=.5");
+    
+    
+    
+    /*$('.wrapper #myMessage [class^="char"]').each(function(i){
+    TweenMax.from($(this), 1,{
         opacity: 0,
-        x: random(-500, 500),
-        y: random(-500, 500),
+        x: random(-250, 250),
+        y: random(-250, 250),
         z: random(-500, 500),
         scale: .1,
         delay: i * .02
-    });
-});
+    },"+=3");
+
+});*/
+
+})();
 
 
 (function($) {
