@@ -1,3 +1,4 @@
+
 (function() {
     $(".wrapper #myMessage p").lettering();
 })(jQuery);
