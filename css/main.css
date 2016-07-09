@@ -5,21 +5,26 @@ html, body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+    height: 100%;
+}
+
 * {
     box-sizing: border-box;
 }
 
+
 .wrapper {
     max-width: 1260px;
     margin: 0 auto;
-    perspective: 400px;
-    overflow:hidden;
 }
 
 .wrapper #myMessage {
-    font-size: 2.5em;
+    font-size: 2.3em;
     color: #848484;
     text-align: center;
+    perspective: 200;
+    margin: inherit;
 }
 
 .wrapper #myMessage span {
@@ -48,7 +53,7 @@ html, body {
     text-decoration: none;
     text-transform: uppercase;
     color: red;
-    transition: all .4s ease-out;
+    transition: all .3s ease-out;
 }
 
 .btn a:hover {
@@ -107,4 +112,33 @@ html, body {
 #footer ul li a:hover {
     color: greenyellow;
     
+}
+
+@media screen and (max-width: 800px) {
+
+    .wrapper {
+        margin-top: 20px;
+        }
+    .wrapper #myMessage {
+        font-size: 1.2em;
+    }
+
+    .wrapper #myMessage {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    .wrapper {
+        margin-top: 40px;
+        }
+    .wrapper #myMessage {
+        font-size: 1.5em;
+    }
+
+    .wrapper #myMessage {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
