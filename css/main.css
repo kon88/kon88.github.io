@@ -84,6 +84,10 @@ body {
     width: 100%;
 }
 
+#mySlider .item a {
+    text-decoration: none;
+}
+
 /* -------FOOTER------- */
 
 #footer {
