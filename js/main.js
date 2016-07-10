@@ -1,5 +1,7 @@
 
 (function() {
+
+        CSSPlugin.defaultForce3D = false; 
     
         $(".wrapper #myMessage p").lettering();
         var para = $('.wrapper #myMessage [class^="char"]');
@@ -27,32 +29,20 @@
     
     tl1.from(text1, .5, {autoAlpha: 0, y: -50});
     tl1.from(text2, .5, {autoAlpha:0},"+=.5");
-    
-    
-    
-    /*$('.wrapper #myMessage [class^="char"]').each(function(i){
-    TweenMax.from($(this), 1,{
-        opacity: 0,
-        x: random(-250, 250),
-        y: random(-250, 250),
-        z: random(-500, 500),
-        scale: .1,
-        delay: i * .02
-    },"+=3");
-
-});*/
 
 })();
 
 
 (function($) {
     $('#mySlider').slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
     dots: true,
-    speed: 500,
-    infinite: false,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
+    speed: 500,
     cssEase: 'linear',
     responsive: [
         {
