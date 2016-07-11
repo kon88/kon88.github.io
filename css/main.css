@@ -81,18 +81,23 @@ body {
 .latestProj {
     margin: 70px 0px 0px 0px;
     padding:0;
-    width:1%;
-    height: 65px;
+    width:30%;
+    height: 85px;
     background: rgba(238,0,0,.4);
-    visibility: hidden;
     display: table;
     text-align: center;
     color: #fff;
     font-size: 1.5em;
 }
 
-.latestProj h1 {
+.latestProj h2 {
     display: table-cell; 
+    vertical-align: middle;
+    width: 100%;
+}
+
+.latestProj {
+    visibility: hidden;
 }
 
 /* ------SLIDER------- */
