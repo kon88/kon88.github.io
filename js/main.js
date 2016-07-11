@@ -1,40 +1,35 @@
 
-(function() {
+$(document).ready(function(){
 
-        CSSPlugin.defaultForce3D = false; 
-    
-        $(".wrapper #myMessage p").lettering();
-        var para = $('.wrapper #myMessage [class^="char"]');
-
-        $(para).each(function(i){
-        TweenMax.from($(this), 1, {
-            opacity: 0,
-            x: random(-200, 200),
-            y: random(-200, 200),
-            z: random(-500, 500),
-            scale: .1,
-            delay: i * .02
-            });
-        });
-    
-        function random(min, max) {
-            return (Math.random() * (max - min)) + min;
-         }  
-    
-    
+$(".wrapper #myMessage p").lettering();
+        
     var text1 = $('.wrapper #myMessage h2');
     var text2 = $('.wrapper #myMessage h1');
     
-    var tl1 = new TimelineMax({delay: 2.5});
+    var tl1 = new TimelineMax({delay: .75});
     
-    tl1.from(text1, .5, {autoAlpha: 0, y: -50});
-    tl1.from(text2, .5, {autoAlpha:0},"+=.5");
+    tl1.from(text1, .7, {autoAlpha: 0, y: -50})
+    .from(text2, .7, {autoAlpha:0},"+=.3")
+    .call(function(){
+       TweenMax.set(".wrapper #myMessage p", {autoAlpha: 1});
+        $('.wrapper #myMessage [class^="char"]').each(function(i) {
+        TweenMax.from($(this), 1, {
+            autoAlpha: 0,
+            x: random(-300, 300),
+            y: random(-300, 300),
+            z: random(-300, 300),
+            scale: 1.5,
+            delay: i * .02
+            });
+    });
 
-})();
+  function random(min, max) {
+    return (Math.random() * (max - min)) + min;
+  }
+});
+        
 
-
-(function($) {
-    $('#mySlider').slick({
+$('#mySlider').slick({
     autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
@@ -53,4 +48,9 @@
         }
     ]
 });
-})(jQuery);
+
+
+    });
+
+    
+        
