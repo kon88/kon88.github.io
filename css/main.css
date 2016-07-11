@@ -20,11 +20,18 @@ body {
 }
 
 .wrapper #myMessage {
+    max-width: 1120px;
     font-size: 2.3em;
     color: #848484;
     text-align: center;
     perspective: 200;
     margin: inherit;
+
+}
+
+.wrapper #myMessage p {
+    visibility: hidden;
+    font-size: 26px;
 }
 
 .wrapper #myMessage span {
