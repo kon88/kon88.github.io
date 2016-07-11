@@ -1,8 +1,11 @@
 
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
 html, body {
     padding:0;
     margin:0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Raleway', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
 }
 
 body {
@@ -21,6 +24,7 @@ body {
 
 .wrapper #myMessage {
     max-width: 1120px;
+    font-family: 'Raleway', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.3em;
     color: #848484;
     text-align: center;
@@ -51,6 +55,7 @@ body {
 .btn {
     margin: 10px;
     text-align: center;
+    visibility: hidden;
     
 }
 
@@ -72,6 +77,23 @@ body {
 .btn i { 
     margin-right: 5px;
     }
+
+.latestProj {
+    margin: 70px 0px 0px 0px;
+    padding:0;
+    width:1%;
+    height: 65px;
+    background: rgba(238,0,0,.4);
+    visibility: hidden;
+    display: table;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.latestProj h1 {
+    display: table-cell; 
+}
 
 /* ------SLIDER------- */
 
