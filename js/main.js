@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
 
+    CSSPlugin
+
 $(".wrapper #myMessage p").lettering();
         
     var text1 = $('.wrapper #myMessage h2');
@@ -10,10 +12,10 @@ $(".wrapper #myMessage p").lettering();
     var box1 = $('.latestProj');
     var par1 = $('.wrapper #myMessage p');
     
-    var tl1 = new TimelineMax({delay: .75});
+    var tl1 = new TimelineMax({delay: .5});
     
-    tl1.from(text1, .7, {autoAlpha: 0, y: -50}).
-    from(text2, .7, {autoAlpha:0},"+=.2").
+    tl1.from(text1, .5, {autoAlpha: 0, y: -50}).
+    from(text2, .5, {autoAlpha:0},"+=.2").
     call(function(){
        TweenMax.set(par1, {autoAlpha: 1});
         $('.wrapper #myMessage [class^="char"]').each(function(i) {
@@ -32,17 +34,16 @@ $(".wrapper #myMessage p").lettering();
   }
 
 var tl2 = new TimelineLite({delay: 1.75});
-    tl2.from(btn1, 1, {autoAlpha: 0, x: -25}, "+=.3").
-    from(btn2, 1, {autoAlpha: 0, x: 25}, "-=.9").
+    tl2.from(btn1, .5, {autoAlpha: 0, x: -25}, "+=.3").
+    from(btn2, .5, {autoAlpha: 0, x: 25}, "-=.5").
     to(box1, 1, {autoAlpha: 1, width: "100%"}).
     to(box1, 1, {backgroundColor: "rgba(238,0,0,1)"}, "+=.2");
 
-  
 });
         
 
 $('#mySlider').slick({
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
     infinite: true,
