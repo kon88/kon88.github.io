@@ -97,6 +97,11 @@ html, body {
     visibility: hidden;
 }
 
+.latestProj i {
+   padding-left: 7px; 
+   color: #C0C0C0;
+}
+
 /* ------SLIDER------- */
 
 #mySlider {
