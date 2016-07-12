@@ -14,8 +14,8 @@ $(".wrapper #myMessage p").lettering();
     
     var tl1 = new TimelineMax({delay: .5});
     
-    tl1.from(text1, .5, {autoAlpha: 0, y: -50}).
-    from(text2, .5, {autoAlpha:0},"+=.2").
+    tl1.from(text1, .3, {autoAlpha: 0, y: -50}).
+    from(text2, .3, {autoAlpha:0},"+=.2").
     call(function(){
        TweenMax.set(par1, {autoAlpha: 1});
         $('.wrapper #myMessage [class^="char"]').each(function(i) {
@@ -34,10 +34,10 @@ $(".wrapper #myMessage p").lettering();
   }
 
 var tl2 = new TimelineLite({delay: 1.75});
-    tl2.from(btn1, .5, {autoAlpha: 0, x: -25}, "+=.3").
-    from(btn2, .5, {autoAlpha: 0, x: 25}, "-=.5").
-    to(box1, 1, {autoAlpha: 1, width: "100%"}).
-    to(box1, 1, {backgroundColor: "rgba(238,0,0,1)"}, "+=.2");
+    tl2.from(btn1, .3, {autoAlpha: 0, x: -25}, "+=.2").
+    from(btn2, .3, {autoAlpha: 0, x: 25}, "-=.3").
+    to(box1, 1, {autoAlpha: 1, width: "100%"},"+=.15").
+    to(box1, 1, {backgroundColor: "rgba(238,0,0,1)"}, "+=.15");
 
 });
         
