@@ -13,16 +13,16 @@ html, body {
 }
 
 
-.wrapper {
+.wrapper {    
     max-width: 1260px;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .wrapper #myMessage {
-    max-width: 1120px;
+    max-width: 810px;
     font-family: 'Raleway', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.3em;
+    font-size: 2.1em;
     color: #848484;
     text-align: center;
     perspective: 200;
@@ -154,13 +154,17 @@ html, body {
     
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 667px) {
 
     .wrapper {
-        margin-top: 40px;
+        margin-top: 25px;
         }
     .wrapper #myMessage {
         font-size: 1.2em;
+    }
+
+    .wrapper #myMessage p {
+        font-size: 20px;
     }
 
     .wrapper #myMessage {
@@ -169,7 +173,7 @@ html, body {
     }
 }
 
-@media screen and (min-width: 801px) and (max-width: 1200px) {
+/*@media screen and (min-width: 801px) and (max-width: 1080px) {
     .wrapper {
         margin-top: 40px;
         max-width: 800px;
@@ -182,4 +186,4 @@ html, body {
         padding-left: 10px;
         padding-right: 10px;
     }
-}
+}*/
